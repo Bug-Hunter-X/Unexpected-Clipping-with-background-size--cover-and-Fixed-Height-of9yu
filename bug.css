@@ -1,0 +1,9 @@
+The following CSS code snippet exhibits an unusual issue.  The `background-image` property doesn't apply correctly when the `background-size` is set to `cover` and the container element has a specific height.  Instead of covering the entire container maintaining aspect ratio, the image is often clipped or displays incorrectly. 
+```css
+div {
+  width: 300px;
+  height: 200px;
+  background-image: url('https://via.placeholder.com/800x600');
+  background-size: cover;
+}
+```
