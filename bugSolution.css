@@ -1,0 +1,16 @@
+One solution is to use a combination of `object-fit: cover` and an `<img>` element within a container.  This provides better control over how images are scaled and positioned.  Another is to ensure that the aspect ratio of the background image is compatible with the container aspect ratio. Here's how that can be done:
+
+```css
+div {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
+This approach uses an `<img>` element within the `div` to manage the image scaling ensuring that the image always covers the entire container maintaining its aspect ratio.  The `overflow: hidden;` property on the container prevents the image from overflowing the boundaries.  This method is generally more reliable than solely relying on `background-size: cover;` when a fixed height is specified.
